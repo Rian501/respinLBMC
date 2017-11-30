@@ -1,0 +1,17 @@
+extends index.pug
+
+block content
+
+	.container
+		.header.mt-5.mb-5
+			h3 File Upload
+		.form-group
+			input(type="file" id="file")
+		.form-group
+			select.custom-select
+				option Select File Type
+				option Email
+				option Incoming Text Message
+				option Outgoing Text Message
+		.login-button
+			button(type="button" ng-click="upload()" class="btn btn-primary btn-lg login-btn") Upload

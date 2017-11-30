@@ -1,10 +1,14 @@
 'use strict';
 
-const express = require('express');
+const express = require("express");
 const app = express();
-const routes = require('./routes.js');
-const bodyParser = require('body-parser');
+const passport = require("passport");
+var session = require("express-session");
+let bodyParser = require("body-parser");
+const flash = require("express-flash");
 const cors = require('cors');
+
+app.set("view engine", "pug");
 
 app.set('models', require('./sequelize/models')); 
 

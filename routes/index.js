@@ -8,5 +8,5 @@ router.get("/", (req, res, next) => {
 });
 
 // pipe all other requests through the route modules
-router.use(require("./uploadRoutes");
+router.use(require("./uploadRoutes"));
 module.exports = router;
