@@ -1,5 +1,6 @@
-# LBMC-Hack
-A repository for the LBMC coding for  a cause hack-a-thon.  
+# LBMC-Hack - Sequelize version
+
+This repo contains an Angular-less pug version of the project begun at [LBMC-Hack](https://github.com/lynnsamuelson/LBMC-Hack)
 
 
 In order to run:
@@ -9,4 +10,3 @@ In order to run:
 - Also install the sequelize CLI by following these steps: https://github.com/sequelize/cli
 - In the `sequelize` directory of the project, run the commands `sequelize db:migrate` and `sequelize db:seed:all`
 
-(I also made it so that you can run npm start from the root instead of in lib)
