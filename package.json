@@ -30,6 +30,7 @@
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.16.1",
+    "express-flash": "0.0.2",
     "express-session": "^1.15.6",
     "grunt": "^1.0.1",
     "jquery": "^3.2.1",
@@ -38,6 +39,7 @@
     "pg": "^7.4.0",
     "pg-hstore": "^2.3.2",
     "popper.js": "^1.12.5",
+    "pug": "^2.0.0-rc.4",
     "request": "^2.83.0",
     "sequelize": "^4.22.8"
   },

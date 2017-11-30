@@ -9,13 +9,26 @@ const flash = require("express-flash");
 const cors = require('cors');
 
 app.set("view engine", "pug");
+app.use("/public", express.static(__dirname + "/public"));
 
-app.set('models', require('./sequelize/models')); 
+let routes = require("./routes/");
 
+app.set('models', require('./models')); 
+
+
+//execute passport strategies file
+require("./config/passport-strat.js");
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
+app.use((req, res, next) => {
+  res.locals.session = req.session;
+  // console.log('res.locals.session', res.locals.session);
+  next();
+});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-
 
 app.use('/', routes);
 
